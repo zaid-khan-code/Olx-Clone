@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OLX Pakistan - Buy & Sell</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="Assets/logo/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="Assets/logo/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="Assets/logo/favicon-16x16.png" />
+    <link rel="manifest" href="Assets/logo/site.webmanifest" />
+    <link rel="icon" type="image/x-icon" href="Assets/logo/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="192x192" href="Assets/logo/android-chrome-192x192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="Assets/logo/android-chrome-512x512.png" />
+    <link rel="stylesheet" href="./style.css" />
+    <link href="/dist/output.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="#">
+                    <img src="https://logos-world.net/wp-content/uploads/2022/04/OLX-Symbol.png" alt="OLX" height="45">
+                </a>
+            </div>
+
+            <div class="search-container">
+                <input type="text" placeholder="Search for cars, phones, etc..." class="search-input">
+                <button class="search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+
+            <div class="header-actions">
+                <a href="./login.html" class="login-link">Login</a>
+                <a href="./index.html" class="signup-link">Sign Up</a>
+                <button class="sell-button" onclick="signOut()">
+                    <i class="fas fa-plus" ></i> Log out
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-list">
+                <li><a href="#">All Categories</a></li>
+                <li><a href="#">Mobiles</a></li>
+                <li><a href="#">Cars</a></li>
+                <li><a href="#">Bikes</a></li>
+                <li><a href="#">Properties</a></li>
+                <li><a href="#">Electronics</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="container">
+            <section class="featured-section">
+                <h3>Featured Ads</h3>
+
+                <div class="ads-grid">
+
+
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h5>Categories</h5>
+                    <ul>
+                        <li><a href="#">Cars</a></li>
+                        <li><a href="#">Properties</a></li>
+                        <li><a href="#">Mobiles</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h5>About</h5>
+                    <ul>
+                        <li><a href="#">About OLX</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2023 OLX Pakistan. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://www.gstatic.com/firebasejs/12.3.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.3.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.3.0/firebase-auth-compat.js"></script>
+
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyD0Utf8LR97OxSbFnyJpeOIemDD2LQBAlY",
+            authDomain: "zaid-olx.firebaseapp.com",
+            projectId: "zaid-olx",
+            storageBucket: "zaid-olx.firebasestorage.app",
+            messagingSenderId: "728248718179",
+            appId: "1:728248718179:web:97d39740bffac731877956",
+            measurementId: "G-N4452QCLJ4"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
