@@ -15,14 +15,17 @@
     <link rel="icon" type="image/png" sizes="192x192" href="Assets/logo/android-chrome-192x192.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="Assets/logo/android-chrome-512x512.png" />
     <link rel="stylesheet" href="./style.css" />
-    <link href="/dist/output.css" rel="stylesheet" />
 </head>
 
 <body>
     <header class="header">
         <div class="logo">
             <a href="#">
-                <img src="https://logos-world.net/wp-content/uploads/2022/04/OLX-Symbol.png" alt="OLX" height="40">
+                <svg height="20" viewBox="0 0 36.289 20.768" alt="Logo" class="_8113da19">
+                    <path
+                        d="M18.9 20.77V0h4.93v20.77zM0 10.39a8.56 8.56 0 1 1 8.56 8.56A8.56 8.56 0 0 1 0 10.4zm5.97-.01a2.6 2.6 0 1 0 2.6-2.6 2.6 2.6 0 0 0-2.6 2.6zm27 5.2l-1.88-1.87-1.87 1.88H25.9V12.3l1.9-1.9-1.9-1.89V5.18h3.27l1.92 1.92 1.93-1.92h3.27v3.33l-1.9 1.9 1.9 1.9v3.27z">
+                    </path>
+                </svg>
             </a>
         </div>
     </header>
@@ -31,18 +34,7 @@
         <div class="auth-box">
             <h2>Welcome Back</h2>
 
-            <div class="social-buttons">
-                <button class="social-btn google">
-                    <i class="fab fa-google"></i> Google
-                </button>
-                <button class="social-btn facebook">
-                    <i class="fab fa-facebook"></i> Facebook
-                </button>
-            </div>
 
-            <div class="divider">
-                <span>or</span>
-            </div>
 
             <form id="loginForm">
                 <div class="input-group">
@@ -65,22 +57,15 @@
             <p class="auth-link">New to OLX? <a href="./index.html">Sign up here</a></p>
         </div>
     </div>
+
+    <footer class="footer">
+        <p>© 2023 OLX Pakistan</p>
+    </footer>
     <script src="https://www.gstatic.com/firebasejs/12.3.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/12.3.0/firebase-firestore-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/12.3.0/firebase-auth-compat.js"></script>
-    <script>
-        const firebaseConfig = {
-            apiKey: "AIzaSyD0Utf8LR97OxSbFnyJpeOIemDD2LQBAlY",
-            authDomain: "zaid-olx.firebaseapp.com",
-            projectId: "zaid-olx",
-            storageBucket: "zaid-olx.firebasestorage.app",
-            messagingSenderId: "728248718179",
-            appId: "1:728248718179:web:97d39740bffac731877956",
-            measurementId: "G-N4452QCLJ4"
-        };
+    <script src="./firebase.js"></script>
 
-        firebase.initializeApp(firebaseConfig);
-    </script>
     <script src="./scripts/login.js"></script>
 </body>
 

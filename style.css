@@ -30,7 +30,13 @@ body {
     justify-content: space-between;
 }
 
-.logo img {
+.logo .svg {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.logo .svg {
     display: block;
 }
 
@@ -91,6 +97,11 @@ body {
 .sell-button:hover {
     background: #04e6ff;
     color: white;
+}
+
+.sell-button:hover .bouutns {
+    color: white;
+
 }
 
 /* Navigation */
@@ -209,9 +220,10 @@ body {
     color: white;
 }
 
-.input-group input:focus {
+.input-group input {
     border-color: #04e6ff;
     outline: none;
+
 }
 
 .checkbox-wrap {
@@ -302,11 +314,14 @@ body {
 
 .ad-img img {
     width: 100%;
-    height: 100%;object-fit: contain;
+    height: 100%;
+    object-fit: contain;
 }
-.Chiffon{
-display: none;
+
+.Chiffon {
+    display: none;
 }
+
 .featured-badge {
     position: absolute;
     top: 10px;
@@ -434,4 +449,245 @@ display: none;
     .ad-info {
         flex: 1;
     }
+}
+
+.bouutns {
+    background: transparent;
+    border: none;
+    color: #04e6ff;
+    font-weight: 600;
+}
+
+.bg select {
+    background: #04e6ff00;
+    border: 2px solid #04e6ff;
+    padding: 10px;
+    outline: none;
+    color: white;
+    border-radius: 130px;
+}
+
+.bg textarea {
+    outline: none;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #04e6ff00;
+    border: 2px solid #04e6ff;
+    padding: 10px;
+    color: white;
+    border-radius: 130px;
+}
+
+.bg input {
+    outline: none;
+    background: #04e6ff00;
+    border: 2px solid #04e6ff;
+    padding: 10px;
+    color: white;
+    border-radius: 130px;
+}
+
+.bg {
+    position: fixed;
+    background-color: #000000bd;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #04e6ff;
+}
+
+.addToCartBtn {
+    background: #2d2d2d;
+    padding: 40px;
+    border-radius: 12px;
+    max-width: 500px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 5px 30px rgba(4, 230, 255, 0.3);
+}
+
+.addToCartBtn h1 {
+    color: #04e6ff;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.addToCartBtn label {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.addToCartBtn label p {
+    color: #ddd;
+    font-weight: 500;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.addToCartBtn input,
+.addToCartBtn select,
+.addToCartBtn textarea {
+    width: 100%;
+    outline: none;
+    background: #444;
+    border: 2px solid #04e6ff;
+    padding: 12px 20px;
+    color: white;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.addToCartBtn input:focus,
+.addToCartBtn select:focus,
+.addToCartBtn textarea:focus {
+    background: #555;
+    border-color: #04e6ff;
+    box-shadow: 0 0 10px rgba(4, 230, 255, 0.3);
+}
+
+.addToCartBtn input::placeholder,
+.addToCartBtn textarea::placeholder {
+    color: #999;
+}
+
+.addToCartBtn textarea {
+    min-height: 100px;
+    resize: vertical;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+}
+
+.addToCartBtn select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2304e6ff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 20px;
+    padding-right: 45px;
+}
+
+/* Update the existing .bg styles */
+.deAcvtive {
+    display: none;
+}
+
+.bg {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(5px);
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    color: #04e6ff;
+    transition: all 2s ease;
+}
+
+.active {
+    display: flex;
+}
+
+/* Scrollbar styling for the modal */
+.addToCartBtn::-webkit-scrollbar {
+    width: 8px;
+}
+
+.addToCartBtn::-webkit-scrollbar-track {
+    background: #1a1a1a;
+    border-radius: 4px;
+}
+
+.addToCartBtn::-webkit-scrollbar-thumb {
+    background: #04e6ff;
+    border-radius: 4px;
+}
+
+.addToCartBtn::-webkit-scrollbar-thumb:hover {
+    background: #03b8cc;
+}
+
+/* Mobile responsiveness for modal */
+@media (max-width: 768px) {
+    .addToCartBtn {
+        padding: 30px 20px;
+        max-width: 95%;
+    }
+
+    .addToCartBtn h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .addToCartBtn label p {
+        font-size: 14px;
+    }
+}
+
+.sellBottun {
+    z-index: 200;
+    cursor: pointer;
+}
+
+.bouutns {
+    cursor: pointer;
+}
+
+.addYourProduct {
+    color: #000;
+}
+
+.onProduct>button {
+    color: #fff;
+}
+
+.onProduct:hover .bouutns {
+    color: #000;
+}
+
+.onProduct {
+    position: fixed;
+    top: 32px;
+    left: 64.6%;
+    padding: 1px 10px;
+    font-weight: 900;
+}
+
+.boby {
+    overflow: hidden;
+}
+
+
+.messasasa {
+    color: red;
+    font-size: 23px;
+    display: flex;
+    justify-content: center;
+    margin: -22px 0px 0px 0px;
+
+
+}
+
+.tiat {
+    color: #ffffff;
+}
+
+.logo a:hover .svg path {
+    fill: #04e6ff;
+    /* Theme color on hover */
+}
+
+.svg path {
+    fill: white;
+    transition: fill 0.3s ease;
 }
