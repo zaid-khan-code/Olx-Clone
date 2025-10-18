@@ -1,0 +1,25 @@
+# Dependencies
+/node_modules
+
+# Firebase
+.firebase/
+firebase.js
+
+# VSCode
+.vscode/
+
+# Build output
+dist/
+build/
+
+# Log files
+*.log
+
+# Cache files
+*.cache
+
+# Editor-specific files
+*.sublime-*
+
+# OS-specific files
+.DS_Store

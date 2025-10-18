@@ -131,9 +131,9 @@ function renderProduct(doc) {
   const card = document.createElement('div');
   card.className = `ad-card`;
   card.setAttribute('data-id', doc.id); // Set a data-id to find the card later for updates/deletes
-
+  card.setAttribute('style', 'display: block !important;')
   card.innerHTML = `
-        <div class="ad-img" style="display: flex;">
+        <div class="ad-img">
             <img src="${product.imgUrl}" alt="${product.name}">
             <span class="featured-badge">Featured</span>
         </div>
