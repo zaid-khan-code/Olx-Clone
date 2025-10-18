@@ -29,8 +29,9 @@ auth.onAuthStateChanged(  (user) => {
     let products = [];
     
     
+    
     getProducts()
-    console.log("User is logged in:", user.email);
+    
     productAddProductEl.addEventListener('click', () => {
       oneTimeAdd()
     })
