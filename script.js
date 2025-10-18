@@ -172,12 +172,15 @@ function removeProduct(docId) {
 }
 
 function getProducts() {
+  console.log("getProducts() called");
   db.collection("products").onSnapshot((snapshot) => {
-    snapshot.docChanges().forEach((change) => {
-      if (change.type === "added") {
-        renderProduct(change.doc);
-      }
-    
+    console.log("onSnapshot callback triggered");
+    console.log("Number of documents:", snapshot.size);
+    snapshot.docs.forEach((doc) => {
+      console.log("Rendering product:", doc.id);
+      renderProduct(doc);
     });
+  }, (error) => {
+    console.error("Error in onSnapshot:", error);
   });
 }
