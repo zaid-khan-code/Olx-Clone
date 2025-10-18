@@ -289,12 +289,13 @@ body {
 }
 
 .ads-grid {
-    display: grid;
+    display: grid !important;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 25px;
 }
 
 .ad-card {
+    display: block !important;
     background: #2d2d2d;
     border-radius: 6px;
     overflow: hidden;

@@ -133,7 +133,7 @@ function renderProduct(doc) {
   card.setAttribute('data-id', doc.id); // Set a data-id to find the card later for updates/deletes
 
   card.innerHTML = `
-        <div class="ad-img">
+        <div class="ad-img" style="display: flex;">
             <img src="${product.imgUrl}" alt="${product.name}">
             <span class="featured-badge">Featured</span>
         </div>
@@ -149,38 +149,15 @@ function renderProduct(doc) {
   adsGrid.appendChild(card);
 }
 
-function updateProduct(doc) {
-  const card = adsGrid.querySelector(`[data-id='${doc.id}']`);
-  if (card) {
-    // For simplicity, we can just re-render the card content.
-    // This is less efficient than updating individual fields, but easier to implement.
-    const product = doc.data();
-    card.querySelector('.price').textContent = `Rs ${product.price}`;
-    card.querySelector('.title').textContent = product.name;
-    card.querySelector('.tiat').textContent = product.dec;
-    card.querySelector('.location-time span').textContent = product.location;
-    card.querySelector('.ad-img img').src = product.imgUrl;
-    card.querySelector('.ad-img img').alt = product.name;
-  }
-}
-
-function removeProduct(docId) {
-  const card = adsGrid.querySelector(`[data-id='${docId}']`);
-  if (card) {
-    card.remove();
-  }
-}
 
 function getProducts() {
-  console.log("getProducts() called");
-  db.collection("products").onSnapshot((snapshot) => {
-    console.log("onSnapshot callback triggered");
-    console.log("Number of documents:", snapshot.size);
+
+  db.collection("products")
+  .onSnapshot((snapshot) => {
     snapshot.docs.forEach((doc) => {
-      console.log("Rendering product:", doc.id);
       renderProduct(doc);
     });
   }, (error) => {
-    console.error("Error in onSnapshot:", error);
+    console.error(error);
   });
 }
