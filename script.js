@@ -24,14 +24,13 @@ const productLocaionEl = document.getElementById("proLoc");
 const productAddProductEl = document.querySelector(".addYourProduct")
 
 
-auth.onAuthStateChanged(  (user) => {
+auth.onAuthStateChanged((user) => {
   if (user) {
     let products = [];
-    
-    
-    
+
+
     getProducts()
-    
+
     productAddProductEl.addEventListener('click', () => {
       oneTimeAdd()
     })

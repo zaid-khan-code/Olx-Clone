@@ -1,11 +1,11 @@
 const firebaseConfig = {
-    apiKey: "AIzaSyD0Utf8LR97OxSbFnyJpeOIemDD2LQBAlY",
-    authDomain: "zaid-olx.firebaseapp.com",
-    projectId: "zaid-olx",
-    storageBucket: "zaid-olx.firebasestorage.app",
-    messagingSenderId: "728248718179",
-    appId: "1:728248718179:web:97d39740bffac731877956",
-    measurementId: "G-N4452QCLJ4"
+    apiKey: "AIzaSyBeOfB13iXY71z5W7srqT0Sx0kwJeQyy-0",
+    authDomain: "sellin-code.firebaseapp.com",
+    projectId: "sellin-code",
+    storageBucket: "sellin-code.firebasestorage.app",
+    messagingSenderId: "446111832505",
+    appId: "1:446111832505:web:8eabaff06a5d508fc27e68",
+    measurementId: "G-Y867EVEJDG"
 };
 
 firebase.initializeApp(firebaseConfig);

@@ -12,7 +12,7 @@ const messageEl = document.getElementById('message');
 
 
 
-function login(email,password) {
+function login(email, password) {
     auth.signInWithEmailAndPassword(email, password)
         .then((userCredential) => {
             const user = userCredential.user;
@@ -40,6 +40,8 @@ function login(email,password) {
                 showMessage('Too many attempts. Please wait a bit.');
             } else if (errorCode === 'auth/network-request-failed') {
                 showMessage('Network error. Check your connection.');
+            } else if (errorCode === 'auth/invalid-credential') {
+                showMessage('Please Registered your email and password.');
             } else {
                 showMessage('Something went wrong. Please try again.');
             }
