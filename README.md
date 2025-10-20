@@ -1,6 +1,6 @@
-# OLX Clone
+# Sellin 
 
-A simple OLX-style web app built using **Firebase Authentication**, **Firestore**, and **Vanilla JavaScript**.  
+A simple Ecommerce web app built using **Firebase Authentication**, **Firestore**, and **Vanilla JavaScript**.  
 This project allows users to **sign up**, **log in**, **post ads**, and **browse listings** — all with a clean responsive UI.
 
 ---
@@ -19,7 +19,7 @@ This project allows users to **sign up**, **log in**, **post ads**, and **browse
 
 ## Overview
 
-The **OLX Clone** project replicates the core functionality of the OLX marketplace — enabling users to buy and sell products through a Firebase-powered web interface.  
+The **Sellin** project replicates the core functionality of the Ecommerce marketplace — enabling users to buy and sell products through a Firebase-powered web interface.  
 Users can create an account, log in, view listings, and add new products with image uploads and details.
 
 ---
@@ -38,7 +38,7 @@ Users can create an account, log in, view listings, and add new products with im
 ## Folder Structure
 
 ```bash
-olx/
+Sellin/
 │
 ├── 404.html             # Custom "Page Not Found" page for Firebase hosting.
 ├── firebase.js          # Firebase configuration and initialization.
@@ -94,19 +94,19 @@ olx/
 
 ## Tech Stack
 
-| Technology           | Description                         |
-| -------------------- | ----------------------------------- |
-| **HTML5**            | Structure & layout                  |
-| **CSS3**             | Styling & responsiveness            |
-| **JavaScript (ES6)** | Logic and dynamic rendering         |
-| **Firebase**         | Authentication & Firestore database |
-| **Firebase Hosting** | For deployment                      |
-
+| Technology             | Description                      |
+| -----------------------|----------------------------------|
+| **HTML5**              | Structure & layout               |
+| **CSS3**               | Styling & responsiveness         |
+| **JavaScript (ES6)**   | Logic and dynamic rendering      |
+| **Firebase**           | Authentication                   |
+| **Firebase Hosting**   | For deployment                   |
+| **Firebase Firestore** | Firestore database               |
 ---
 
 ## Author
 
-**Zaid Khan**  
+**Muhammad Zaid Khan**  
 Frontend Developer & Firebase Enthusiast  
 Passionate about building modern, functional web experiences.
 
