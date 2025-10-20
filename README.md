@@ -63,7 +63,7 @@ Sellin/
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/yourusername/olx-clone.git
+   git clone https://github.com/zaid-khan-code/Sellin.git
    ```
 
 2. **Open the folder**
