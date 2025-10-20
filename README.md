@@ -69,7 +69,7 @@ Sellin/
 2. **Open the folder**
 
    ```bash
-   cd olx-clone
+   cd Sellin
    ```
 
 3. **Add your Firebase configuration**  
