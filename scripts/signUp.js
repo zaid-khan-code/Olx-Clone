@@ -16,53 +16,56 @@ const messageEl = document.getElementById('message');
 
 // All Elements Value
 
-
-
-form.addEventListener('submit', (e) => {
-    e.preventDefault(); // stop actual form submission
-
-    // basic validations
-    if (!nameEl.value.trim()) return showError('Please enter your full name');
-    if (!emailEl.value.trim()) return showError('Please enter your email');
-    if (!numberEl.value.trim()) return showError('Please enter your phone number');
-    if (!passwordEl.value.trim()) return showError('Please enter a password');
-    if (passwordEl.value.length < 6) return showError('Password must be at least 6 characters');
-    if (confirmEl.value !== passwordEl.value) return showError('Passwords do not match');
-    if (!agreeEl.checked) return showError('Please agree to the terms before continuing');
-
+auth.onAuthStateChanged((user) => {
+    if (user) {
+        window.location.href = "./home.html";
+        
+    } else {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault(); // stop actual form submission
+            
+            // basic validations
+            if (!nameEl.value.trim()) return showError('Please enter your full name');
+            if (!emailEl.value.trim()) return showError('Please enter your email');
+            if (!numberEl.value.trim()) return showError('Please enter your phone number');
+            if (!passwordEl.value.trim()) return showError('Please enter a password');
+            if (passwordEl.value.length < 6) return showError('Password must be at least 6 characters');
+            if (confirmEl.value !== passwordEl.value) return showError('Passwords do not match');
+            if (!agreeEl.checked) return showError('Please agree to the terms before continuing');
+            
     // if all valid
     messageEl.style.color = 'green';
     messageEl.textContent = 'All fields valid! Submitting...';
-
+    
     // here you can call Firebase or submit the form
     signUp()
-
-
+    
+    
 });
 // Event Listener
 function signUp() {
     auth.createUserWithEmailAndPassword(emailEl.value, passwordEl.value)
-        .then((userCredential) => {
-            // user info save        
-            let userPassword = passwordEl.value;
-            let userName = nameEl.value;
-            let userNumber = numberEl.value;
-            let userEmail = emailEl.value;
+    .then((userCredential) => {
+        // user info save        
+        let userPassword = passwordEl.value;
+        let userName = nameEl.value;
+        let userNumber = numberEl.value;
+        let userEmail = emailEl.value;
 
-            console.log(auth.currentUser.uid);
+        console.log(auth.currentUser.uid);
             db.collection("User Info").doc(`${auth.currentUser.uid}`).set({
                 name: nameEl.value,
                 email: emailEl.value,
                 number:numberEl.value,
                 password:passwordEl.value,
-
+                
             })
-                .then((res) => {
-                    console.log("Document successfully written!" + res);
-                })
-                .catch((error) => {
-                    console.error("Error writing document: ", error);
-                });
+            .then((res) => {
+                console.log("Document successfully written!" + res);
+            })
+            .catch((error) => {
+                console.error("Error writing document: ", error);
+            });
             // Sign In 
             var user = userCredential.user;
             console.log(`create user Sussecfully`);
@@ -105,10 +108,10 @@ function signUp() {
                 messageEl.style.color = "red";
             }
         });
-
-}
-
-function showError(message) {
+        
+    }
+    
+    function showError(message) {
     const messageEl = document.getElementById('message');
     if (messageEl) {
         messageEl.textContent = message;
@@ -117,3 +120,6 @@ function showError(message) {
         alert(message); // fallback if the message element doesn’t exist
     }
 }
+// window.location.href = "./login.html";
+}
+});
